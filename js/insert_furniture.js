@@ -98,150 +98,35 @@ window.onload = function () {
 	});
 	/** [End] control roomsize */
 
+	/** List of furniture to put */
+	var furniture = ["benchCushion", "bedBunk", "bookcaseClosedWide", "cardboardBoxOpen", "cabinetTelevision","cabinetTelevision",
+	"chairModernCushion", "dryer", "kitchenBar", "kitchenFridge", "kitchenSink", "lampRoundFloor", "loungeChair",
+	"loungeSofa", "televisionModern", "washer", "sideTable", "loungeSofaOttoman", "pottedPlant",
+	"rugRound", "tableGlass", "toilet", "washerDryerStacked", "speaker", "kitchenStove"];
+
 	/** [Start] furniture button listener */
-	var benchCushion = document.getElementById("benchCushion");
-	benchCushion.addEventListener("click", function(event){
-		furniture_path = './furniture/benchCushion.obj';
-		console.log("furniture path ="+'./furniture/benchCushion.obj');
+
+	var div_list = document.getElementById("furniture_list");
+	furniture.forEach(item => {
+		var div = document.createElement("div");
+		div.id = item;
+		div.style = "margin: 10px 40px 10px 0px;  width: 150px;"
+		div_list.appendChild(div);
+
+		var img = document.createElement("img");
+		img.src = "./furniture_image/"+item+".png";
+		div.appendChild(img);
+
+		var a = document.createElement("a");
+		a.innerHTML = "<br>"+item;
+		div.appendChild(a);
+
+		var some_furniture = document.getElementById(item);
+		some_furniture.addEventListener("click", function(event){
+			furniture_path = './furniture/'+item+'.obj';
+		});
 	});
 
-	var bedBunk = document.getElementById("bedBunk");
-	bedBunk.addEventListener("click", function(event){
-		furniture_path = './furniture/bedBunk.obj';
-		console.log("furniture path ="+'./furniture/bedBunk.obj');
-	});
-
-	var bookcaseClosedWide = document.getElementById("bookcaseClosedWide");
-	bookcaseClosedWide.addEventListener("click", function(event){
-		furniture_path = './furniture/bookcaseClosedWide.obj';
-		console.log("furniture path ="+'./furniture/bookcaseClosedWide.obj');
-	});
-
-	var cardboardBoxOpen = document.getElementById("cardboardBoxOpen");
-	cardboardBoxOpen.addEventListener("click", function(event){
-		furniture_path = './furniture/cardboardBoxOpen.obj';
-		console.log("furniture path ="+'./furniture/cardboardBoxOpen.obj');
-	});
-
-	var cabinetTelevision = document.getElementById("cabinetTelevision");
-	cabinetTelevision.addEventListener("click", function(event){
-		furniture_path = './furniture/cabinetTelevision.obj';
-		console.log("furniture path ="+'./furniture/cabinetTelevision.obj');
-	});
-
-	var chairModernCushion = document.getElementById("chairModernCushion");
-	chairModernCushion.addEventListener("click", function(event){
-		furniture_path = './furniture/chairModernCushion.obj';
-		console.log("furniture path ="+'./furniture/chairModernCushion.obj');
-	});
-
-	var dryer = document.getElementById("dryer");
-	dryer.addEventListener("click", function(event){
-		furniture_path = './furniture/dryer.obj';
-		console.log("furniture path ="+'./furniture/dryer.obj');
-	});
-
-	var kitchenBar = document.getElementById("kitchenBar");
-	kitchenBar.addEventListener("click", function(event){
-		furniture_path = './furniture/kitchenBar.obj';
-		console.log("furniture path ="+'./furniture/kitchenBar.obj');
-	});
-
-	var kitchenFridge = document.getElementById("kitchenFridge");
-	kitchenFridge.addEventListener("click", function(event){
-		furniture_path = './furniture/kitchenFridge.obj';
-		console.log("furniture path ="+'./furniture/kitchenFridge.obj');
-	});
-
-	var kitchenSink = document.getElementById("kitchenSink");
-	kitchenSink.addEventListener("click", function(event){
-		furniture_path = './furniture/kitchenSink.obj';
-		console.log("furniture path ="+'./furniture/kitchenSink.obj');
-	});
-
-	var lampRoundFloor = document.getElementById("lampRoundFloor");
-	lampRoundFloor.addEventListener("click", function(event){
-		furniture_path = './furniture/lampRoundFloor.obj';
-		console.log("furniture path ="+'./furniture/lampRoundFloor.obj');
-	});
-
-	var loungeChair = document.getElementById("loungeChair");
-	loungeChair.addEventListener("click", function(event){
-		furniture_path = './furniture/loungeChair.obj';
-		console.log("furniture path ="+'./furniture/loungeChair.obj');
-	});
-
-	var loungeSofa = document.getElementById("loungeSofa");
-	loungeSofa.addEventListener("click", function(event){
-		furniture_path = './furniture/loungeSofa.obj';
-		console.log("furniture path ="+'./furniture/loungeSofa.obj');
-	});
-
-	var televisionModern = document.getElementById("televisionModern");
-	televisionModern.addEventListener("click", function(event){
-		furniture_path = './furniture/televisionModern.obj';
-		console.log("furniture path ="+'./furniture/televisionModern.obj');
-	});
-
-	var washer = document.getElementById("washer");
-	washer.addEventListener("click", function(event){
-		furniture_path = './furniture/washer.obj';
-		console.log("furniture path ="+'./furniture/washer.obj');
-	});
-
-	var sideTable = document.getElementById("sideTable");
-	sideTable.addEventListener("click", function(event){
-		furniture_path = './furniture/sideTable.obj';
-		console.log("furniture path ="+'./furniture/sideTable.obj');
-	});
-
-	var loungeSofaOttoman = document.getElementById("loungeSofaOttoman");
-	loungeSofaOttoman.addEventListener("click", function(event){
-		furniture_path = './furniture/loungeSofaOttoman.obj';
-		console.log("furniture path ="+'./furniture/loungeSofaOttoman.obj');
-	});
-
-	var pottedPlant = document.getElementById("pottedPlant");
-	pottedPlant.addEventListener("click", function(event){
-		furniture_path = './furniture/pottedPlant.obj';
-		console.log("furniture path ="+'./furniture/pottedPlant.obj');
-	});
-
-	var rugRound = document.getElementById("rugRound");
-	rugRound.addEventListener("click", function(event){
-		furniture_path = './furniture/rugRound.obj';
-		console.log("furniture path ="+'./furniture/rugRound.obj');
-	});
-
-	var tableGlass = document.getElementById("tableGlass");
-	tableGlass.addEventListener("click", function(event){
-		furniture_path = './furniture/tableGlass.obj';
-		console.log("furniture path ="+'./furniture/tableGlass.obj');
-	});
-
-	var toilet = document.getElementById("toilet");
-	toilet.addEventListener("click", function(event){
-		furniture_path = './furniture/toilet.obj';
-		console.log("furniture path ="+'./furniture/toilet.obj');
-	});
-
-	var washerDryerStacked = document.getElementById("washerDryerStacked");
-	washerDryerStacked.addEventListener("click", function(event){
-		furniture_path = './furniture/washerDryerStacked.obj';
-		console.log("furniture path ="+'./furniture/washerDryerStacked.obj');
-	});
-
-	var speaker = document.getElementById("speaker");
-	speaker.addEventListener("click", function(event){
-		furniture_path = './furniture/speaker.obj';
-		console.log("furniture path ="+'./furniture/speaker.obj');
-	});
-
-	var kitchenStove = document.getElementById("kitchenStove");
-	kitchenStove.addEventListener("click", function(event){
-		furniture_path = './furniture/kitchenStove.obj';
-		console.log("furniture path ="+'./furniture/kitchenStove.obj');
-	});
 	/** [End] furniture button listener */
 	
 	/** [Start] mode: insert or view */
@@ -363,14 +248,14 @@ window.onload = function () {
 	/** [Start] function to load mtl file */
 	
 	/** [Start] function to get the furniture name */
-	function getFilename(){
-		var testFolder = './furniture';
-		var fs = require('fs');
-
-		fs.readdir(testFolder, function(error, filelist){
-			console.log(filelist);
-		})
-	}
+	//function getFilename(){
+	//	var testFolder = './furniture';
+	//	var fs = require('fs');
+	//
+	//	fs.readdir(testFolder, function(error, filelist){
+	//		console.log(filelist);
+	//	})
+	//}
 	/** [End] function to get the furniture name */
 
 	/** [Start] function to initialize Three.js */

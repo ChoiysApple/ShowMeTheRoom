@@ -564,12 +564,31 @@ ol {
 	color: #eb2b63;
 }
 
-.user-panel {
+#furniture_list div{
+	text-overflow: ellipsis;
 	float: right;
 	background: #eb2b63;
 	color: #fff;
-	margin-left: 30px;
-	margin-right: 70px;
+	margin: auto;
+	margin-top: 15px;
+	font-size: 14px;
+	padding: 12px 19px;
+	line-height: 1;
+	border-radius: 14px;
+}
+
+#furniture_list a {
+	max-width: 100px;
+    text-overflow: ellipsis;
+	color: #fff;
+}
+
+.user-panel {
+	text-overflow: ellipsis;
+	float: right;
+	background: #eb2b63;
+	color: #fff;
+	margin: auto;
 	margin-top: 15px;
 	font-size: 14px;
 	padding: 12px 19px;
@@ -578,6 +597,8 @@ ol {
 }
 
 .user-panel a {
+	max-width: 100px;
+    text-overflow: ellipsis;
 	color: #fff;
 }
 

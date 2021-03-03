@@ -370,8 +370,6 @@ THREE.DragControls = function ( _objects, _camera, _domElement ) {
 		if ( intersects.length > 0 ) {
 
 			_selected = intersects[ 0 ].object;
-
-			console.log("더블더릅ㄹ", _selected);
 			_selected.rotateY(THREE.Math.degToRad(90));
 		}	
 	}

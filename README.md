@@ -36,6 +36,9 @@ __This project requires web server to launch local. Reccomand to use__
     * Insert furniture selection button
     * Change light direction
     * Add Drag & Drop function
+
+* 1.0.0
+    * First release
     
 ## Contributors
 * [@ChoiysApple](https://github.com/ChoiysApple)
@@ -45,8 +48,12 @@ __This project requires web server to launch local. Reccomand to use__
 
 
 ## Tech Stack
-* WebGL
-* three.js
+* [WebGL](https://webglfundamentals.org/)
+* [three.js](https://threejs.org/)
+
+## Asset used
+* [Furniture Kit](https://www.kenney.nl/assets/furniture-kit) from [Keeny](https://www.kenney.nl/assets)
+* (CC0 1.0 Universal) 
 
 </br>
 
